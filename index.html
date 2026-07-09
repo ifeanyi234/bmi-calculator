@@ -6,20 +6,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <title>JS Project | BMI calculator</title>
   </head>
-  <body class="poppins-regular">
+  <body class="flex poppins-regular">
     <header>
       <nav class="nav">
-        <div class="brand">BMI-Calculator</div>
+        <div class="brand poppins-bold">BMI-Calculator</div>
       </nav>
     </header>
-    <div class="conatiner">
-      <div class="bmi-info">
+    <div class="container">
+      <div class="flex bmi-info">
         <h1>What is Body Mass Index (BMI)?</h1>
         <p>
           Body Mass Index (BMI) is a widely used screening tool that estimates
@@ -43,27 +43,24 @@
           composition.
         </p>
       </div>
-      <div class="bmi-container">
-        <form action="#">
-          <fieldset>
-            <label for="#height">Height:</label>
-            <input type="number" id="height" />
-          </fieldset>
-          <fieldset>
-            <label for="#weight">Weight:</label>
-            <input type="number" id="weight" />
-          </fieldset>
-          <input type="submit" id="submit" />
-        </form>
+      <div class="bmi-container flex">
         <div class="output">
           <div class="bmi">
             <h2>24.2</h2>
             <p>Normal weight</p>
           </div>
-          <div class="bmi-desc">
-            <p>healthy bmi for height of 185cm and weight 75kg</p>
-          </div>
         </div>
+        <form action="#" class="flex">
+          <fieldset class="flex">
+            <label for="#height">Height:</label>
+            <input type="number" id="height" />
+          </fieldset>
+          <fieldset class="flex">
+            <label for="#weight">Weight:</label>
+            <input type="number" id="weight" />
+          </fieldset>
+          <input type="submit" id="submit" />
+        </form>
       </div>
     </div>
     <script src="script.js"></script>
