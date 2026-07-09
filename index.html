@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Project | BMI calculator</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="brand">BMI-Calculator</div>
+      </nav>
+    </header>
+    <div class="conatiner">
+      <div class="bmi-info">
+        <h1>What is Body Mass Index (BMI)?</h1>
+        <p>
+          Body Mass Index (BMI) is a widely used screening tool that estimates
+          whether a person has a healthy body weight for their height.
+        </p>
+        <p>
+          By comparing your weight to your height, this calculator will place
+          your result into one of four standard health categories:
+        </p>
+        <ul class="info-list">
+          <li class="info-item">Underweight: Below 18.5</li>
+          <li class="info-item">Normal weight: 18.5 – 24.9</li>
+          <li class="info-item">Overweight: 25.0 – 29.9</li>
+          <li class="info-item">Obese: 30.0 and above</li>
+        </ul>
+        <p>
+          <b>Note:</b> While BMI is a helpful starting point for understanding
+          general health trends, it is not a diagnostic medical tool. It
+          calculates based purely on height and weight, meaning it does not
+          account for factors like muscle mass, bone density, or overall body
+          composition.
+        </p>
+      </div>
+      <div class="bmi-container">
+        <form action="#">
+          <fieldset>
+            <label for="#height">Height:</label>
+            <input type="number" id="height" />
+          </fieldset>
+          <fieldset>
+            <label for="#weight">Weight:</label>
+            <input type="number" id="weight" />
+          </fieldset>
+          <input type="submit" id="submit" />
+        </form>
+        <div class="output">
+          <div class="bmi">
+            <h2>24.2</h2>
+            <p>Normal weight</p>
+          </div>
+          <div class="bmi-desc">
+            <p>healthy bmi for height of 185cm and weight 75kg</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
