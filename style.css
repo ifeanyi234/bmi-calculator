@@ -196,6 +196,42 @@ header {
   padding: 10px 5%;
   background-color: #f5f4f4;
 }
+.error {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+
+  /* 
+    1. Perspective first (gives the 3D depth)
+    2. translate(-50%, -40px) keeps it centered X, and pushes it up Y
+    3. rotateX(-90deg) folds it flat upwards
+    4. scale(0.8) shrinks it slightly 
+  */
+  transform: perspective(600px) translate(-50%, -40px) rotateX(-90deg)
+    scale(0.8);
+
+  /* This is the secret sauce: it acts as the hinge at the top edge */
+  transform-origin: top center;
+
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.375rem;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+
+  /* I added a cubic-bezier timing function for a really smooth, natural drop */
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+}
+
+.error.active {
+  /* Bring it down to 0px Y, flatten the rotation to 0deg, and scale to normal */
+  transform: perspective(600px) translate(-50%, 0) rotateX(0deg) scale(1);
+  opacity: 1;
+}
 .brand {
   font-size: 30px;
 }
@@ -249,6 +285,7 @@ input[type="submit"] {
   border-radius: 5px;
   padding: 20px;
   transition: 0.25s ease-in-out;
+  cursor: pointer;
 }
 input[type="submit"]:hover {
   background-color: #141414;
@@ -268,13 +305,11 @@ input[type="submit"]:active {
   }
   .bmi-container {
     min-width: 400px;
-    /* flex-grow: 2; */
   }
 }
 @media (min-width: 1400px) {
   .bmi-container {
     min-width: 600px;
-    /* flex-grow: 2; */
   }
 }
 @media (min-height: 1000px) and (max-width: 1025px) {
