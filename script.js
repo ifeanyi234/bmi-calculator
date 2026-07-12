@@ -4,6 +4,9 @@ const weightInp = document.querySelector("#weight");
 const btn = document.querySelector("#submit");
 const err = document.querySelector(".error");
 
+let bmi = 0;
+let bmiRange = "";
+
 const calcBmi = function (height, weight) {
   return parseFloat((weight / (height / 100) ** 2).toFixed(1));
 };
@@ -22,7 +25,11 @@ btn.addEventListener("click", function (e) {
     err.innerHTML = "Not a valid weight or height!";
     err.classList.add("active");
   } else {
-    console.log(calcBmi(height, weight));
+    bmi = calcBmi(height, weight);
+    bmiRange = `${bmi >= 30.0 ? "You're Obese" : bmi >= 25.0 && bmi <= 29.9 ? "You're Overweight" : bmi >= 18.5 && bmi <= 24.9 ? "You have normal weight" : "You're Underweight"}`;
+
+    console.log(bmi);
+    console.log(bmiRange);
     err.classList.remove("active");
   }
 });
