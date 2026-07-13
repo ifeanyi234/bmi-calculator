@@ -260,6 +260,9 @@ header {
   justify-content: center;
 }
 .output {
+  border: 5px dashed #dcdbdb;
+  border-radius: 10px;
+  padding: 5px 10px;
   display: none;
 }
 form {
@@ -305,6 +308,7 @@ input[type="submit"]:active {
   }
   .bmi-container {
     min-width: 400px;
+    border-radius: 10px;
   }
 }
 @media (min-width: 1400px) {

@@ -6,6 +6,7 @@ const heightInp = document.querySelector("#height");
 const weightInp = document.querySelector("#weight");
 const btn = document.querySelector("#submit");
 const err = document.querySelector(".error");
+let bmi = 0;
 
 const calcBmi = function (height, weight) {
   return parseFloat((weight / (height / 100) ** 2).toFixed(1));
@@ -32,9 +33,12 @@ btn.addEventListener("click", function (e) {
     // Remove active class from error
     err.classList.remove("active");
 
+    // bmi value
+    bmi = calcBmi(height, weight);
+
     // Display
     output.style.display = "flex";
-    dispBmi.innerHTML = calcBmi(height, weight);
+    dispBmi.innerHTML = `Your BMI is : ${bmi}`;
     dispDesc.innerHTML = getBmiDesc(bmi);
   }
 });
