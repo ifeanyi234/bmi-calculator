@@ -1,6 +1,6 @@
 "use strict";
 const output = document.querySelector(".output");
-const dispBmi = document.querySelector(".bmi > h2");
+const dispBmi = document.querySelector(".bmi > h1");
 const dispDesc = document.querySelector(".bmi > p");
 const heightInp = document.querySelector("#height");
 const weightInp = document.querySelector("#weight");
@@ -13,7 +13,15 @@ const calcBmi = function (height, weight) {
 };
 
 const getBmiDesc = function (bmi) {
-  return `${bmi >= 30.0 ? "You're Obese" : bmi >= 25.0 && bmi <= 29.9 ? "You're Overweight" : bmi >= 18.5 && bmi <= 24.9 ? "You have normal weight" : "You're Underweight"}`;
+  return `${
+    bmi >= 30.0
+      ? "You're Obese"
+      : bmi >= 25.0
+        ? "You're Overweight"
+        : bmi >= 18.5
+          ? "You have normal weight"
+          : "You're Underweight"
+  }`;
 };
 
 btn.addEventListener("click", function (e) {
