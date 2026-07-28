@@ -4,7 +4,7 @@ A clean, professional health utility that calculates a user's Body Mass Index (B
 
 ## Live Demo
 
-[Insert Live Demo Link Here]
+[https://ifeanyi234.github.io/bmi-calculator/]
 
 ## Features
 
